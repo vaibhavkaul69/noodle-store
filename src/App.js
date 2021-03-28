@@ -20,12 +20,7 @@ class App extends Component {
 					<Route exact path="/:id" component={FullRecipe} />
 					<Route exact path="/" component={() => <Container />} />
 				</BrowserRouter>
-				<img
-					src={illustration_2}
-					alt="Bg_Image"
-					className="bg_top_right-image"
-				/>
-				<img src={illustration_3} alt="Bg_Image" className="left_center" />
+
 				<img src={illustration_4} alt="Bg_Image" className="right_bottom" />
 				<img src={illustration_5} alt="Bg_Image" />
 				<img

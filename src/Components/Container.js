@@ -16,7 +16,7 @@ class Container extends Component {
 		)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log(res);
+				//console.log(res);
 				this.setState({
 					recipeList: res,
 				});
@@ -62,7 +62,7 @@ class Container extends Component {
 				return -1;
 			}
 		});
-		console.log(dataArray);
+		//console.log(dataArray);
 		this.setState({
 			recipeList: dataArray,
 		});

@@ -67,7 +67,7 @@ function FullRecipe(props) {
 					<h1>{selectedRecipe[0]["Top Ten"]}/10</h1>
 					<div className="star_rating">
 						<button style={{ background: "#11998e" }}>
-							{selectedRecipe[0].Stars}/5
+							{isNaN(selectedRecipe[0].Stars) ? 5 : selectedRecipe[0].Stars}/5
 						</button>
 						<div className="stars">
 							<span className="fa fa-star"></span>
@@ -104,10 +104,6 @@ function FullRecipe(props) {
 							<br />
 							Minutes
 						</span>
-					</div>
-					<div className="fav_section">
-						<h3>FAVOURITE THIS RECIPE</h3>
-						<img src={LikeHeart} alt="Heart Red" />
 					</div>
 					<hr className="line-seperate" />
 					<span className="comment_here">ADD COMMENTS</span>

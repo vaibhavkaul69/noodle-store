@@ -76,13 +76,13 @@
 }
 .star_rating > button {
 	color: #ffffff;
-	background: #000;
+
 	margin-right: 10px;
 	border: none;
 	border-radius: 5px;
 	font-family: metro-light;
 	padding: 3px;
-	width: 40px;
+	min-width: 50px;
 }
 .col_2-text {
 	text-align: right;
