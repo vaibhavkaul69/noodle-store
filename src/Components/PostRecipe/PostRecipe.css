@@ -20,6 +20,15 @@
 	z-index: 999;
 	background-color: #0009;
 }
+.star-rating {
+	font: 600 16px "metro-light", sans-serif;
+	background: #0082c8;
+	color: #fff;
+	padding: 5px 5px;
+	border-radius: 10px;
+	text-align: center;
+	width: 60px;
+}
 .overlay > a {
 	text-decoration: none;
 	font-family: metro-light;

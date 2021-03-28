@@ -1,16 +1,17 @@
 /** @format */
 
-import React from 'react';
-import './SearchRecipe.css';
-import SearchIcon from '../../Assets/Icons/Icon feather-search.png';
-function SearchRecipe() {
+import React from "react";
+import "./SearchRecipe.css";
+import SearchIcon from "../../Assets/Icons/Icon feather-search.png";
+function SearchRecipe({ searchItem }) {
 	return (
-		<div className='search_recipe_box'>
-			<img src={SearchIcon} className='search_btn' />
+		<div className="search_recipe_box">
+			<img src={SearchIcon} className="search_btn" />
 			<input
-				className='search_input'
-				type='text'
-				placeholder='Search your favourite recipe...'
+				onChange={(e) => searchItem(e.target.value)}
+				className="search_input"
+				type="text"
+				placeholder="Search by Brand name..."
 			/>
 		</div>
 	);

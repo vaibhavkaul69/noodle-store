@@ -1,34 +1,37 @@
 /** @format */
 
-import React from 'react';
-import SearchRecipe from '../SearchRecipe/SearchRecipe';
-import { Link } from 'react-router-dom';
-import PlayBtn from '../../Assets/Icons/Icon ionic-ios-play-circle.png';
-import './FullRecipe.css';
-import LikeHeart from '../../Assets/Icons/Icon feather-heart-color.png';
+import React from "react";
+import SearchRecipe from "../SearchRecipe/SearchRecipe";
+import { Link } from "react-router-dom";
+import PlayBtn from "../../Assets/Icons/Icon ionic-ios-play-circle.png";
+import "./FullRecipe.css";
+import LikeHeart from "../../Assets/Icons/Icon feather-heart-color.png";
 function FullRecipe(props) {
 	console.log(props);
-	let localStorageData = JSON.parse(localStorage.getItem('recipe-list-data'));
+	let localStorageData = JSON.parse(localStorage.getItem("noodle-data"));
+	console.log(props.match.params);
 	let selectedRecipe = localStorageData.filter((item) => {
-		return item.id == props.match.params.id;
+		return item.Variety == props.match.params.id;
 	});
 	console.log(selectedRecipe);
 	return (
-		<div className='full-recipe-content '>
+		<div className="full-recipe-content ">
 			<SearchRecipe />
-			<Link to='/'>&larr; Go Back</Link>
-			<div className='full_description_column'>
-				<div className='column_1'>
-					<div className='image_overlay'>
-						<div className='overlay_button'>
+			<Link style={{ zIndex: "999" }} to="/">
+				&larr; Go Back
+			</Link>
+			<div className="full_description_column">
+				<div className="column_1">
+					<div className="image_overlay">
+						<div className="overlay_button">
 							<img src={PlayBtn} />
 							<h5>Play Video</h5>
 						</div>
-						<img src={selectedRecipe[0].image} className='col_1-img' />
+						<img src={selectedRecipe[0].image} className="col_1-img" />
 					</div>
 
 					<h2>Ingredients</h2>
-					<p className='col-text'>
+					<p className="col-text">
 						Lorem Ipsum is simply dummy text of the printing and typesetting
 						industry. Lorem Ipsum has been the industry's standard dummy text
 						ever since the 1500s, when an unknown printer took a galley of type
@@ -40,7 +43,7 @@ function FullRecipe(props) {
 						PageMaker including versions of Lorem Ipsum.
 					</p>
 					<h2>How to prepare :</h2>
-					<p className='col-text'>
+					<p className="col-text">
 						Lorem Ipsum is simply dummy text of the printing and typesetting
 						industry. Lorem Ipsum has been the industry's standard dummy text
 						ever since the 1500s, when an unknown printer took a galley of type
@@ -56,20 +59,20 @@ function FullRecipe(props) {
 						Ipsum.
 					</p>
 				</div>
-				<div className='column_2'>
-					<span className='light_text'>RECIPES</span>
+				<div className="column_2">
+					<span className="light_text">RECIPES</span>
 					<h1>{selectedRecipe[0].name}</h1>
-					<div className='star_rating'>
+					<div className="star_rating">
 						<button>4/5</button>
-						<div className='stars'>
-							<span class='fa fa-star'></span>
-							<span class='fa fa-star'></span>
-							<span class='fa fa-star'></span>
-							<span class='fa fa-star'></span>
+						<div className="stars">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
 						</div>
 					</div>
-					<span className='light_text'>DESCRIPTION</span>
-					<p className='col-text col_2-text'>
+					<span className="light_text">DESCRIPTION</span>
+					<p className="col-text col_2-text">
 						Lorem Ipsum is simply dummy text of the printing and typesetting
 						industry. Lorem Ipsum has been the industry's standard dummy text
 						ever since the 1500s, when an unknown printer took a galley of type
@@ -80,7 +83,7 @@ function FullRecipe(props) {
 						and more recently with desktop publishing software like Aldus
 						PageMaker including versions of Lorem Ipsum.
 					</p>
-					<div className='three_circles'>
+					<div className="three_circles">
 						<span>
 							8
 							<br />
@@ -97,12 +100,12 @@ function FullRecipe(props) {
 							Minutes
 						</span>
 					</div>
-					<div class='fav_section'>
+					<div class="fav_section">
 						<h3>FAVOURITE THIS RECIPE</h3>
-						<img src={LikeHeart} alt='Heart Red' />
+						<img src={LikeHeart} alt="Heart Red" />
 					</div>
-					<hr className='line-seperate' />
-					<span className='comment_here'>ADD COMMENTS</span>
+					<hr className="line-seperate" />
+					<span className="comment_here">ADD COMMENTS</span>
 					<textarea>Type Something here...</textarea>
 					<button>ADD COMMENT</button>
 				</div>
