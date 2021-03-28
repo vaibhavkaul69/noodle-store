@@ -5,7 +5,7 @@ import SearchRecipe from "../SearchRecipe/SearchRecipe";
 import { Link } from "react-router-dom";
 import PlayBtn from "../../Assets/Icons/Icon ionic-ios-play-circle.png";
 import "./FullRecipe.css";
-import LikeHeart from "../../Assets/Icons/Icon feather-heart-color.png";
+import LikeHeart from "../../Assets/Icons/Icon-feather-heart-color.png";
 function FullRecipe(props) {
 	console.log(props);
 	let localStorageData = JSON.parse(localStorage.getItem("noodle-data"));
@@ -16,7 +16,6 @@ function FullRecipe(props) {
 	console.log(selectedRecipe);
 	return (
 		<div className="full-recipe-content ">
-			<SearchRecipe />
 			<Link style={{ zIndex: "999" }} to="/">
 				&larr; Go Back
 			</Link>

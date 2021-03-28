@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import PostRecipe from "./PostRecipe/PostRecipe";
 import RecipeSectionHeading from "./RecipeSectionHeading/RecipeSectionHeading";
 import SearchRecipe from "./SearchRecipe/SearchRecipe";
-import axios from "axios";
+//import axios from "axios";
 class Container extends Component {
 	state = {
 		recipeList: null,

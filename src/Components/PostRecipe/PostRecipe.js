@@ -5,7 +5,7 @@ import "./PostRecipe.css";
 import { Link } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import LikeBtn from "../../Assets/Icons/Icon feather-heart.png";
-import time from "../../Assets/Icons/Icon feather-clock.png";
+//import time from "../../Assets/Icons/Icon feather-clock.png";
 function PostRecipe({ recipeList, images }) {
 	console.log(images);
 	if (recipeList) {
@@ -14,7 +14,6 @@ function PostRecipe({ recipeList, images }) {
 			return (
 				<div className="recipe_item_list" key={recipeItem.id}>
 					<div className="overlay">
-						<Link to="/">View More</Link>
 						<Link to={"/" + recipeItem.Variety}>Quick View</Link>
 					</div>
 					<h3 className="recipe_list_category">In {recipeItem.Brand}</h3>
