@@ -20,14 +20,26 @@
 	z-index: 999;
 	background-color: #0009;
 }
-.star-rating {
+.star-rating,
+.top-rating {
 	font: 600 16px "metro-light", sans-serif;
 	background: #0082c8;
 	color: #fff;
+	margin: 5px;
 	padding: 5px 5px;
-	border-radius: 10px;
+	border-radius: 5px;
 	text-align: center;
-	width: 60px;
+	width: 100px;
+}
+.top-rating {
+	background: #b92b27;
+	width: 80%;
+	margin: 0px 10px;
+}
+.country {
+	font: 600 16px "metro-light", sans-serif;
+	margin: 10px 0px;
+	color: grey;
 }
 .overlay > a {
 	text-decoration: none;

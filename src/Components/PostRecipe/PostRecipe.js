@@ -7,12 +7,12 @@ import Loader from "../Loader/Loader";
 import LikeBtn from "../../Assets/Icons/Icon feather-heart.png";
 //import time from "../../Assets/Icons/Icon feather-clock.png";
 function PostRecipe({ recipeList, images }) {
-	console.log(images);
+	//console.log(images);
 	if (recipeList) {
 		//console.log(recipeList);
 		return recipeList.map((recipeItem) => {
 			return (
-				<div className="recipe_item_list" key={recipeItem.id}>
+				<div className="recipe_item_list" key={recipeItem.Variety}>
 					<div className="overlay">
 						<Link to={"/" + recipeItem.Variety}>Quick View</Link>
 					</div>
@@ -26,13 +26,16 @@ function PostRecipe({ recipeList, images }) {
 						className="recipe_list_image"
 					/>
 					<div className="recipe_list_description">
-						<h1></h1>
 						<div className="recipe_list_header">
 							<div className="recipe_name_time">
+								<h3 className="country">{recipeItem.Country}</h3>
 								<h2 className="recipe_list_name">{recipeItem.Variety}</h2>
-								<h3 className="star-rating">
-									{isNaN(recipeItem.Stars) ? 5 : recipeItem.Stars} &#9733;
-								</h3>
+								<div className="star-top-row">
+									<h3 className="star-rating">
+										{isNaN(recipeItem.Stars) ? 5 : recipeItem.Stars} &#9733;
+									</h3>
+									<h3 className="top-rating">{recipeItem["Top Ten"]}/10</h3>
+								</div>
 							</div>
 							<img src={LikeBtn} alt="Like the recipe" />
 						</div>

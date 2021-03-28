@@ -38,12 +38,12 @@ class Container extends Component {
 	searchItem = (val) => {
 		const noodleData = this.state.recipeList;
 		const searchData = noodleData.filter((item) => {
-			console.log(item, val);
+			//console.log(item, val);
 			if (item.Brand.toLowerCase().indexOf(val.toLowerCase()) !== -1) {
 				return item;
 			}
 		});
-		console.log(searchData);
+		//console.log(searchData);
 		if (val.length == 0) {
 			this.setState({
 				recipeList: JSON.parse(localStorage.getItem("noodle-data")),
@@ -54,10 +54,26 @@ class Container extends Component {
 			});
 		}
 	};
+	sortByStars = () => {
+		const dataArray = this.state.recipeList.sort((a, b) => {
+			if (a.Stars < b.Stars) {
+				return 1;
+			} else {
+				return -1;
+			}
+		});
+		console.log(dataArray);
+		this.setState({
+			recipeList: dataArray,
+		});
+	};
 	render() {
 		return (
 			<div className="main-content">
-				<SearchRecipe searchItem={this.searchItem} />
+				<SearchRecipe
+					searchItem={this.searchItem}
+					sortByStars={this.sortByStars}
+				/>
 				<RecipeSectionHeading />
 				<div className="recipe_list_container">
 					<PostRecipe
