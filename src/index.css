@@ -1,0 +1,20 @@
+/** @format */
+
+@font-face {
+	font-family: metro-light;
+	src: url('./Assets/Fonts/Metropolis/Metropolis-Light.otf');
+}
+@font-face {
+	font-family: metro-bold;
+	src: url('./Assets/Fonts/Metropolis/Metropolis-Bold.otf');
+}
+@font-face {
+	font-family: metro-extra-bold;
+	src: url('./Assets/Fonts/Metropolis/Metropolis-ExtraBold.otf');
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: lightgrey;
+}

@@ -1,0 +1,116 @@
+/** @format */
+
+.recipe_item_list {
+	box-shadow: 0 0 8px #0009;
+	border-radius: 10px;
+	position: relative;
+	min-height: 400px;
+}
+.overlay {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	display: flex;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 999;
+	background-color: #0009;
+}
+.overlay > a {
+	text-decoration: none;
+	font-family: metro-light;
+	font-size: 1rem;
+	color: #fff;
+	transition: all 0.5s ease-in-out;
+	border: 1px solid #fff;
+	width: 150px;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 10px;
+	margin: 10px;
+	height: 40px;
+}
+.overlay > a:hover {
+	color: #000;
+	background-color: #fff;
+}
+.recipe_item_list:hover .overlay {
+	opacity: 1;
+}
+.recipe_list_image {
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	border-radius: 10px 10px 10px 10px;
+	height: 100%;
+}
+.recipe_list_category {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+	font-size: 15px;
+	font-family: metro-light, sans-serif;
+	font-weight: 100;
+	padding: 8px 20px;
+	border-radius: 0 10px 0px 10px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99;
+}
+.recipe_list_description {
+	position: absolute;
+	background: linear-gradient(
+		to bottom rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 1)
+	);
+	bottom: 0;
+	height: 40%;
+	width: 100%;
+	border-radius: 0 0 10px 10px;
+	z-index: 99;
+}
+.recipe_list_header {
+	display: flex;
+	padding: 5px 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+.recipe_name_time > div {
+	margin-top: 5px;
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+}
+
+.time_duration {
+	margin-left: 10px;
+}
+.recipe_list_name {
+	margin: 0;
+	padding-top: 5px;
+	font-size: 1.2rem;
+	font-family: metro-bold;
+}
+.recipe_name_time > div > img,
+.recipe_list_header > img {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
+.recipe_list_data {
+	padding: 0 20px;
+	line-height: 15px;
+	text-align: left;
+	font-size: 13px;
+	font-family: metro-light;
+}
