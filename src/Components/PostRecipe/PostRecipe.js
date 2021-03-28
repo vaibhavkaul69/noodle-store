@@ -29,6 +29,7 @@ function PostRecipe({ recipeList, images }) {
 						<div className="recipe_list_header">
 							<div className="recipe_name_time">
 								<h3 className="country">{recipeItem.Country}</h3>
+								Style - <h3 className="style country">{recipeItem.Style}</h3>
 								<h2 className="recipe_list_name">{recipeItem.Variety}</h2>
 								<div className="star-top-row">
 									<h3 className="star-rating">

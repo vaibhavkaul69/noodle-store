@@ -4,7 +4,7 @@
 	box-shadow: 0 0 8px #0009;
 	border-radius: 10px;
 	position: relative;
-	min-height: 400px;
+	min-height: 480px;
 }
 .overlay {
 	height: 100%;
@@ -40,6 +40,14 @@
 	font: 600 16px "metro-light", sans-serif;
 	margin: 10px 0px;
 	color: grey;
+}
+.style {
+	background-color: #11998e;
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: 100;
+	border-radius: 5px;
+	display: inline;
 }
 .overlay > a {
 	text-decoration: none;
@@ -118,7 +126,9 @@
 }
 .recipe_list_name {
 	margin: 0;
+	margin-top: 10px;
 	padding-top: 5px;
+	padding-right: 10px;
 	font-size: 1.2rem;
 	font-family: metro-bold;
 }

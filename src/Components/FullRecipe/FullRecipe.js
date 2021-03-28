@@ -66,7 +66,9 @@ function FullRecipe(props) {
 					<span className="light_text">Rank in Top 10</span>
 					<h1>{selectedRecipe[0]["Top Ten"]}/10</h1>
 					<div className="star_rating">
-						<button>{selectedRecipe[0].Stars}/5</button>
+						<button style={{ background: "#11998e" }}>
+							{selectedRecipe[0].Stars}/5
+						</button>
 						<div className="stars">
 							<span className="fa fa-star"></span>
 							<span className="fa fa-star"></span>
